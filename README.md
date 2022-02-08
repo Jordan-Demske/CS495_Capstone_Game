@@ -1,4 +1,4 @@
-#Simple Minigame Framework 1
+# Simple Minigame Framework 1
 This is the framwork for the first minigame to be included in our site for Pharmacist Robert Gold.
 It will be one of a series of games relating to the reviews foind on the site, and will be used to help
 promote the information in our site in a new and engaging way.
