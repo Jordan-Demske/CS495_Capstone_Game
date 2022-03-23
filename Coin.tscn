@@ -7,10 +7,7 @@
 radius = 15.9999
 height = 0.0
 
-[node name="Coin" type="RigidBody2D" groups=[
-"coins",
-]]
-rotation = 1.5708
+[node name="Coin" type="RigidBody2D" groups=["coins"]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 2 )
@@ -20,6 +17,8 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -3.45707e-06 )

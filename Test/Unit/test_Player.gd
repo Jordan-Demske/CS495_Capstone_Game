@@ -31,7 +31,6 @@ func test_on_Player_body_entered_mob():
 	_player._on_Player_body_entered(_mob)
 	assert_signal_emitted(_player, 'hit')
 	assert_signal_not_emitted(_player, 'coin_grabbed')
-	_mob.free()
 
 
 func test_start():

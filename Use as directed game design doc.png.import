@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.stex"
+path="res://.import/Use as directed game design doc.png-f7b89809bf96b54ae82554c6d6bcf781.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icon.png"
-dest_files=[ "res://.import/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.stex" ]
+source_file="res://Use as directed game design doc.png"
+dest_files=[ "res://.import/Use as directed game design doc.png-f7b89809bf96b54ae82554c6d6bcf781.stex" ]
 
 [params]
 

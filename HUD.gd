@@ -13,7 +13,7 @@ func show_game_over():
 	show_message("Game Over")
 	# Wait untill the MessageTimer has counted down.
 	yield($MessageTimer, "timeout")
-	$Message.text = "Simple Minigame"
+	$Message.text = "USE AS DIRECTED"
 	$Message.show()
 	# Make a one-shot timer and wait for it to finish
 	yield(get_tree().create_timer(1), "timeout")
@@ -21,7 +21,7 @@ func show_game_over():
 
 
 func update_score(score):
-	$ScoreLabel.text = str(score)
+	$ScoreLabel.text = "Score: " + str(score)
 
 
 func _on_MessageTimer_timeout():
@@ -32,3 +32,7 @@ func _on_StartButton_pressed():
 	$StartButton.hide()
 	emit_signal("start_game")
 
+
+func move_marker(mod):
+	var amount = $StatusBar.rect_size.x/10
+	$StatusBar/Marker.rect_position.x += amount*mod

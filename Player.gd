@@ -1,10 +1,14 @@
 extends Area2D
 signal hit
-signal coin_grabbed
+signal dead
+
+signal drunk
+signal pill_grabbed
 
 export var speed = 400 # How fast the player will move
-var screen_size # Size of the game window
+export var health = 5 # number of times player can get hit
 
+var is_drunk = false
 
 func _ready():
 	hide()
@@ -28,16 +32,34 @@ func _process(delta):
 
 
 func _on_Player_body_entered(body):
+	
 	if body.is_in_group("coins"):
-		emit_signal("coin_grabbed")
 		body.free()
+		if is_drunk:
+			health -= 1
+		else:
+			health += 1
+		emit_signal("pill_grabbed")
+		
 	elif body.is_in_group("mobs"):
-		hide() # Player disapeers after being hit
+		if is_drunk:
+			health -= 1
+		else:
+			is_drunk = true
+			health = 2
+		body.free()
 		emit_signal("hit")
+		emit_signal("drunk")
+		
+	print(health)
+	
+	if (health <= 0 or health >= 10) :
+		hide() # Player disapeers after being hit
+		emit_signal("dead")
 		$CollisionShape2D.set_deferred("disabled", true)
 
 
-func start(pos):
-	position = pos
+func spawn(pos):
+	global_position = pos
 	show()
 	$CollisionShape2D.disabled = false

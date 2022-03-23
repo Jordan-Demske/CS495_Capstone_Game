@@ -7,7 +7,4 @@ margin_right = 740.0
 margin_bottom = 466.0
 rect_min_size = Vector2( 740, 250 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 _directory1 = "res://Test/Unit"
