@@ -56,6 +56,7 @@ func pill_grabbed():
 func new_game():
 	score = 0
 	$HUD/StatusBar.show()
+	$HUD/ScoreLabel.show()
 	$HUD.set_to_position(5)
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
@@ -69,7 +70,6 @@ func _on_StartTimer_timeout():
 	$CoinTimer.start()
 	$PointTimer.start()
 	$DeteriorationTimer.start()
-
 
 func _on_SpawnTimer_timeout():
 	var mob = Mob.instance()
