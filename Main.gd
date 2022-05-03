@@ -13,7 +13,7 @@ func _ready():
 	randomize()
 
 
-func _process(delta):
+func _process(_delta):
 	if($Player.is_drunk):
 		shader_value += d_speed
 	else: shader_value -= d_speed/2
@@ -38,6 +38,7 @@ func game_over():
 
 func player_hit():
 	$DrunkTimer.start()
+	$OuchSound.play()
 	if $Player.is_drunk:
 		$HUD.move_marker(-1)
 	else:
@@ -48,6 +49,7 @@ func player_hit():
 
 func pill_grabbed():
 	if $Player.is_drunk:
+		$OuchSound.play()
 		$HUD.move_marker(-1)
 	else:
 		$HUD.move_marker(1)
