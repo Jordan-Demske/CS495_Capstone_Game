@@ -116,10 +116,7 @@ This is the standard format for GUT, and additional test should be contained wit
 
 ### Third-Party Assets
 
-`art/House In a Forest Loop.ogg` Copyright &copy; 2012
-[HorrorPen](https://opengameart.org/users/horrorpen), [CC-BY 3.0:
-Attribution](http://creativecommons.org/licenses/by/3.0/). Source:
-https://opengameart.org/content/loop-house-in-a-forest
+`Main Theme` (https://freesound.org/people/Cnupoc/sounds/449640/) by Cnupoc, liscened under [CC0 1.0] Creative Commons Universal
 
 `Gamey game Sounds >> Sad Synth` (https://freesound.org/people/Fupicat/sounds/538150/) by Fupicat, liscened under [CC0 1.0] Creative Commons Universal
 
